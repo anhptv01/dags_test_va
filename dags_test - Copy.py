@@ -8,5 +8,5 @@ with DAG("test_mssql_conn", start_date=datetime(2025,1,1), schedule=None, catchu
     t1 = MsSqlOperator(
         task_id="ping",
         mssql_conn_id="192.168.5.41",
-        sql="SELECT 1;",
+        sql="SELECT * FROM PNJP_DW.dbo.ANHPTV_INPUT_MC_GROUP_SC",
     )
